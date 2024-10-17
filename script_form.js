@@ -7,8 +7,8 @@ let formPengalaman = document.querySelector("#form-pengalaman")
 let formEmail = document.querySelector("#form-email")
 let btnSubmit = document.querySelector("#btn-submit")
 
-document.addEventListener("DOMContentLoaded", () => {
 
+document.addEventListener("DOMContentLoaded", () => {
     // mengisi nilai default form berdasarkan data yang ada di local storage
     formNama.value = localStorage.getItem('nama');
     formRole.value = localStorage.getItem('role');

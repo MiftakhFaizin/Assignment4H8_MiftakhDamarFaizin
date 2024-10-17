@@ -10,19 +10,21 @@ let pengalaman = document.querySelector("#pengalaman")
 let email = document.querySelector("#email")
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    // mengisi data profil sekarang berdasarkan data yang ada di local storage
-    nama.innerText = localStorage.getItem('nama');
-    role.innerText = localStorage.getItem('role');
-    availability.innerText = localStorage.getItem('availability');
-    usia.innerText = localStorage.getItem('usia');
-    lokasi.innerText = localStorage.getItem('lokasi');
-    pengalaman.innerText = localStorage.getItem('pengalaman');
-    email.innerText = localStorage.getItem('email');
+    //mengecek apakah local storage ada isinya atau tidak
+    //untuk menangani saat pertama kali load agar tidak kosong data pada tampilan
+    if(localStorage.length > 0) {
+        // mengisi data profil sekarang berdasarkan data yang ada di local storage
+        nama.innerText = localStorage.getItem('nama');
+        role.innerText = localStorage.getItem('role');
+        availability.innerText = localStorage.getItem('availability');
+        usia.innerText = localStorage.getItem('usia');
+        lokasi.innerText = localStorage.getItem('lokasi');
+        pengalaman.innerText = localStorage.getItem('pengalaman');
+        email.innerText = localStorage.getItem('email');
+    }
 });
 
 btnEdit.addEventListener("click", () => {
-
     //mengirim data sekarang ke local storage
     localStorage.setItem('nama', nama.innerText)
     localStorage.setItem('role', role.innerText)
