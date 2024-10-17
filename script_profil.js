@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //mengecek apakah local storage ada isinya atau tidak
     //untuk menangani saat pertama kali load agar tidak kosong data pada tampilan
     if(localStorage.length > 0) {
-        // mengisi data profil sekarang berdasarkan data yang ada di local storage
+        //mengisi data profil sekarang berdasarkan data yang ada di local storage
         nama.innerText = localStorage.getItem('nama');
         role.innerText = localStorage.getItem('role');
         availability.innerText = localStorage.getItem('availability');

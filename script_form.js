@@ -9,7 +9,7 @@ let btnSubmit = document.querySelector("#btn-submit")
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    // mengisi nilai default form berdasarkan data yang ada di local storage
+    //mengisi nilai default form berdasarkan data yang ada di local storage
     formNama.value = localStorage.getItem('nama');
     formRole.value = localStorage.getItem('role');
     formAvailability.value = localStorage.getItem('availability');
@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 btnSubmit.addEventListener("click", () => {
+    //mengisi local storage sesuai dengan value dari form
     localStorage.setItem('nama', formNama.value)
     localStorage.setItem('role', formRole.value)
     localStorage.setItem('availability', formAvailability.value)
